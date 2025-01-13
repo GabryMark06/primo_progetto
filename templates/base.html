@@ -14,7 +14,7 @@
   <body>
     
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Primo Progetto</a>
+        <a class="navbar-brand" href="">Primo Progetto</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,9 +48,11 @@
                 News
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{% url 'news:home'%}">es if</a>
-                <a class="dropdown-item" href="{% url 'news:articoli/1'%}">if else elif</a>
-                <a class="dropdown-item" href="{% url 'news/lista_articoli/'%}">for</a>
+                <a class="dropdown-item" href="{% url 'news:homeview'%}">Homepage</a>
+                <a class="dropdown-item" href="{% url 'news:articolo_detail' 1 %}">Articolo detail</a>
+                <a class="dropdown-item" href="{% url 'news:lista_articoli1'%}">Lista artcoli</a>
+                <a class="dropdown-item" href="{% url 'news:lista_articoli' 1 %}">Lista articolo all</a>
+                <a class="dropdown-item" href="{% url 'news:queryBase' %}">query base</a>
               </div>
           </li>
           </ul>
