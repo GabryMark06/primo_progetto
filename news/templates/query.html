@@ -85,4 +85,38 @@
     {% endfor %}
     <hr>
 
+    {% for articolo in articoli_mese_anno %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for giornalista in giornalisti_con_articoli_popolari %}
+    <h1>{{giornalista.nome}}</h1>
+    <h3>{{giornalista.cognome}}</h3>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_con_and %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_con_or %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
+    {% for articolo in articoli_con_not %}
+    <h1>{{articolo.titolo}}</h1>
+    <h3>{{articolo.contenuto}}</h3>
+    <h5>Autore: {{articolo.giornalista}}</h5>
+    {% endfor %}
+    <hr>
+
 {% endblock content %}
