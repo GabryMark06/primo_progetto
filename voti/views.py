@@ -18,7 +18,9 @@ def viewC(request):
    media2=0.0
    media3=0.0
    cont=0
+   studenti=[]
    for studente, materie in voti.items():
+      studenti.append(studente)
       somma_voti = 0
       numero_voti = 0
       for materia in materie:
@@ -35,7 +37,8 @@ def viewC(request):
    context={
       'media1':media1,
       'media2':media2,
-      'media3':media3
+      'media3':media3,
+      'studenti':studenti
    }
    return render(request,"viewC.html",context)
 
@@ -56,11 +59,12 @@ def viewD(request):
    for studente, materie in voti.items():
       for materia in materie:
          if materia[1]==maxVoto:
-            materieMax.append(materie[0])
+            materieMax.append(materia[0])
             studenteMax.append(studente)
          if materia[1]==minVoto:
-            materieMin.append(materie[0])
+            materieMin.append(materia[0])
             studenteMin.append(studente)
+   
    context={
       'maxVoto':maxVoto,
       'minVoto':minVoto,

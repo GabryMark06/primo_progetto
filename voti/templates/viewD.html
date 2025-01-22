@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}viewD{% endblock %}
+{% block content %}
+
+    <ul>
+        <li>Voto massimo: {{maxVoto}}</li>
+        <li>Materie con il voto massimo: 
+        {% for materia in materieMax %}
+            {{materia}}, 
+        {% endfor %}
+        </li>
+        <li>Studenti con il voto massimo: 
+            {% for studente in studenteMax %}
+                {{studente}}, 
+            {% endfor %}
+        </li>
+        <li>Voto minimo: {{minVoto}}</li>
+        <li>Materie con il voto minimo: 
+        {% for materia in materieMin %}
+            {{materia}}, 
+        {% endfor %}
+        </li>
+        <li>Studenti con il voto minimo: 
+        {% for studente in studenteMin %}
+            {{studente}}, 
+        {% endfor %}
+        </li>
+    </ul>
+
+{% endblock content %}
