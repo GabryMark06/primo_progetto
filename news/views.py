@@ -103,14 +103,14 @@ def queryBase(request):
     }
     return render(request,'query.html',context)
 
-class giornalistaDetailView(ListView):
+class giornalistaDetailView(DetailView):
     model=Giornalista
     template_name="giornalista_detail.html"
 
     def get_context_data(self, **kwargs):
         pk = self.kwargs.get('pk')
         context=super().get_context_data(**kwargs)
-        context["giornalista"] = Articolo.objects.filter(id=pk)
+        context["giornalista"] = Giornalista.objects.get(id=pk)
         return context
 
 
