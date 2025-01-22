@@ -5,9 +5,9 @@ app_name='news'
 
 urlpatterns = [
     path('',home,name="homeview"),
-    path("articoli/<int:pk>", articoloDetailView, name="articolo_detail"),
-    path("lista_articoli/", lista_articoli, name="lista_articoli1"),
-    path("lista_articoli/<int:pk>", lista_articoli, name="lista_articoli"),
+    path("articoli/<int:pk>", articoloDetailView.as_view(), name="articolo_detail"),
+    path("lista_articoli/", lista_articoli.as_view(), name="lista_articoli1"),
+    path("lista_articoli/<int:pk>", lista_articoli.as_view(), name="lista_articoli"),
     path("queryBase/", queryBase, name="queryBase"),
-    path("giornalista/<int:pk>", articoloDetailView, name="giornalista_detail")
+    path("giornalista/<int:pk>", giornalistaDetailView.as_view(), name="giornalista_detail")
 ]

@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from .models import Articolo, Giornalista
 import datetime
 from django.db.models import Q
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
 
 def home(request):
     articoli=Articolo.objects.all()
@@ -11,24 +13,22 @@ def home(request):
     print(context)
     return render(request,"homepage_news.html",context)
 
-def articoloDetailView(request, pk):
-    articolo=get_object_or_404(Articolo, pk=pk)
-    context={"articolo":articolo}
-    return render(request,"articolo_detail.html",context)
+class articoloDetailView(DetailView):
+    model = Articolo
+    template_name = "articolo_detail.html"
 
-def lista_articoli(request, pk=None):
-    if(pk):
-        articoli=Articolo.objects.filter(giornalista_id=pk)
-        context={
-            'articoli':articoli,
-        }
-        return render(request,'lista_articoli.html',context)
-    else:
-        articoli=Articolo.objects.all()
-        context={
-            'articoli':articoli,
-        }
-        return render(request,'lista_articoli_all.html',context)
+class lista_articoli(ListView):
+    model=Articolo
+    template_name="lista_articoli.html"
+
+    def get_context_data(self, **kwargs):
+        pk = self.kwargs.get('pk')
+        context=super().get_context_data(**kwargs)
+        if pk:
+            context["articoli"] = Articolo.objects.filter(id=pk)
+        else: 
+            context["articoli"] = Articolo.objects.all()
+        return context
 
 def queryBase(request):
     articoli_cognome=Articolo.objects.filter(giornalista__cognome="Rossi")
@@ -103,10 +103,15 @@ def queryBase(request):
     }
     return render(request,'query.html',context)
 
-def giornalistaDetailView(request, pk):
-    giornalista=get_object_or_404(Giornalista,pk=pk)
-    context={"giornalista":giornalista}
-    return render(request, "giornalista_detail.html", context)
+class giornalistaDetailView(ListView):
+    model=Giornalista
+    template_name="giornalista_detail.html"
+
+    def get_context_data(self, **kwargs):
+        pk = self.kwargs.get('pk')
+        context=super().get_context_data(**kwargs)
+        context["giornalista"] = Articolo.objects.filter(id=pk)
+        return context
 
 
 
