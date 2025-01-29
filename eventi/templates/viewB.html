@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}viewB{% endblock title %}
+{% block content %}
+
+    {% for evento in eventi %}
+        <h4><strong>Titolo: </strong></h4><p>{{evento.titolo}}</p>
+        <h4><strong>Data: </strong></h4><p>{{evento.data_evento}}</p>
+        <h4><strong>Descrizione: </strong></h4><p>{{evento.descrizione}}</p>
+        <h4><strong>Partecipanti: </strong></h4><p>{{evento.partecipanti}}</p>
+        <hr>
+    {% endfor %}
+
+{% endblock content %}

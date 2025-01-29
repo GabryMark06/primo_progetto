@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}viewA{% endblock title %}
+{% block content %}
+
+    {% for evento in eventi %}
+        <p>{{evento.titolo}}</p>
+    {% endfor %}
+
+{% endblock content %}

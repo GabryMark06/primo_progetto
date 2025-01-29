@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}viewD{% endblock title %}
+{% block content %}
+
+    <h2><strong>Evento con più partecipanti</strong></h2>
+    <h4>Titolo: </h4><p>{{eventoMax.titolo}}</p>
+    <h4>Partecipanti: </h4><p>{{eventoMax.partecipanti}}</p>
+
+    <h2><strong>Evento con meno partecipanti</strong></h2>
+    <h4>Titolo: </h4><p>{{eventoMin.titolo}}</p>
+    <h4>Partecipanti: </h4><p>{{eventoMin.partecipanti}}</p>
+
+{% endblock content %}
