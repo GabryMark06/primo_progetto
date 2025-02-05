@@ -6,13 +6,10 @@ from .models import Evento
 
 class viewA(ListView):
 
-    model=Evento
-    template_name="viewA.html"
-
-    def get_context_data(self, **kwargs):
-        context=super().get_context_data(**kwargs)
-        context["eventi"] = Evento.objects.all().order_by('data_evento')
-        return context
+    model = Evento
+    template_name = "viewA.html"
+    context_object_name = "eventi"  # Assegna un nome personalizzato alla lista degli eventi
+    ordering = ['data_evento']
     
 class viewB(ListView):
     model = Evento

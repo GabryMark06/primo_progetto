@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}viewA{% endblock title %}
 {% block content %}
-
+    <ul>
     {% for evento in eventi %}
-        <p>{{evento.titolo}}</p>
+        <li>{{evento.titolo}}</li>
     {% endfor %}
-
+    </ul>
 {% endblock content %}

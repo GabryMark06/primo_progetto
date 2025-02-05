@@ -3,7 +3,7 @@ from datetime import datetime
 
 class Evento(models.Model):
     titolo=models.CharField(max_length=20)
-    data_evento=models.DateTimeField(default=datetime.now())
+    data_evento=models.DateTimeField()
     descrizione=models.TextField()
     partecipanti=models.IntegerField(default=0)
     
