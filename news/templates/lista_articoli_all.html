@@ -5,11 +5,11 @@
 {% block content %}
     {% for articolo in articoli %}
     <p><strong>Titolo:</strong>
-        <a href={% url 'news:articolo_detail' articolo.id %}>{{articolo.titolo}}</a>
+        <a href={% url 'news:articolo_detail' corsi.id %}>{{corso.titolo}}</a>
         </p>
-        <p><strong>Contenuto: </strong>{{articolo.contenuto}}</p>
-        <p><strong>Autore: </strong>
-            <a href={% url 'news:giornalista_detail' articolo.giornalista.id %}>{{articolo.giornalista}}</a>
-        </p>
+        <li><p><strong>Descrizione: </strong>{{corsi.descrizione}}</p></li>
+        <li><p><strong>Data inizio: </strong>{{corsi.data_inizio}}</p></li>
+        <li><p><strong>Data fine: </strong>{{corsi.data_fine}}</p></li>
+        <li><p><strong>Data inizio: </strong>{{corsi.data_inizio}}</p></li>
     {% endfor %}
 {% endblock content %}

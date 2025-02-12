@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}viewD{% endblock title %}
+{% block content %}
+
+<ul>
+    {% for corso in corsi %}
+        <li><p><strong>Titolo:</strong></p></li>
+        <li><p><strong>Descrizione: </strong>{{corso.descrizione}}</p></li>
+        <li><p><strong>Data inizio: </strong>{{corso.data_inizio}}</p></li>
+        <li><p><strong>Data fine: </strong>{{corso.data_fine}}</p></li>
+        <li><p><strong>Posti disponibili </strong>{{corso.posti_disponibili}}</p></li>
+        <hr>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

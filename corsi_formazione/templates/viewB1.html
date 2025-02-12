@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}viewB{% endblock title %}
+{% block content %}
+    <h4><strong>Titolo: </strong></h4><p>{{corso.titolo}}</p>
+    <h4><strong>Descrizione: </strong></h4><p>{{corso.descrizione}}</p>
+    <h4><strong>Data inizio: </strong></h4><p>{{corso.data_inizio}}</p>
+    <h4><strong>Data fine: </strong></h4><p>{{corso.data_fine}}</p>
+    <h4><strong>Posti disponibili: </strong></h4><p>{{corso.posti_disponibili}}</p>
+{% endblock content %}
