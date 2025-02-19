@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}viewF{% endblock title %}
+{% block content %}
+
+    <ul>
+        <li><strong>Corso con più posti disponibili: </strong>{{corsoMax.titolo}} {{corsoMax.posti_disponibili}} posti</li>
+        <li><strong>Corso con meno posti disponibili: </strong>{{corsoMin.titolo}} {{corsoMin.posti_disponibili}} posti</li>
+        <li><strong>Totale posti disponibili per tutti i corsi: </strong>{{posti_disponibili}}</li>
+    </ul>
+
+{% endblock content %}

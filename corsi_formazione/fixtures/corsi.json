@@ -1,0 +1,57 @@
+[
+    {
+        "model": "corsi_formazione.corso",
+        "pk": 1,
+        "fields": {
+            "titolo": "Programmazione Python",
+            "descrizione": "Descrizione corso Programmazione Python",
+            "data_inizio": "2025-03-10",
+            "data_fine": "2025-03-20",
+            "posti_disponibili": 30
+        }
+    },
+    {
+        "model": "corsi_formazione.corso",
+        "pk": 2,
+        "fields": {
+            "titolo": "Sviluppo Web con Django",
+            "descrizione": "Descrizione corso Sviluppo Web con Django",
+            "data_inizio": "2025-04-15",
+            "data_fine": "2025-04-30",
+            "posti_disponibili": 25
+        }
+    },
+    {
+        "model": "corsi_formazione.corso",
+        "pk": 3,
+        "fields": {
+            "titolo": "Intelligenza Artificiale",
+            "descrizione": "Descrizione corso Intelligenza Artificiale",
+            "data_inizio": "2025-05-05",
+            "data_fine": "2025-05-15",
+            "posti_disponibili": 20
+        }
+    },
+    {
+        "model": "corsi_formazione.corso",
+        "pk": 4,
+        "fields": {
+            "titolo": "Cybersecurity",
+            "descrizione": "Descrizione corso Cybersecurity",
+            "data_inizio": "2025-05-20",
+            "data_fine": "2025-05-30",
+            "posti_disponibili": 15
+        }
+    },
+    {
+        "model": "corsi_formazione.corso",
+        "pk": 5,
+        "fields": {
+            "titolo": "Database SQL",
+            "descrizione": "Descrizione corso Database SQL",
+            "data_inizio": "2025-06-01",
+            "data_fine": "2025-06-10",
+            "posti_disponibili": 30
+        }
+    }
+]
