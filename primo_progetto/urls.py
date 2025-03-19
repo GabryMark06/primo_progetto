@@ -27,5 +27,11 @@ urlpatterns = [
     path('seconda_app/',include("seconda_app.urls",namespace="seconda_app")),
     path('voti/',include("voti.urls",namespace="voti")),
     path('corsi_formazione/',include("corsi_formazione.urls",namespace="corsi_formazione")),
+    path('forms_app/',include("forms_app.urls",namespace="forms_app")),
     path('eventi/',include("eventi.urls",namespace="eventi"))
+]
+
+#Add Django site authentication urls (for login, logout, password management)
+urlpatterns += [
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

@@ -46,7 +46,10 @@ INSTALLED_APPS = [
     'news',
     'voti',
     'eventi',
-    'corsi_formazione'
+    'corsi_formazione',
+    'forms_app',
+    'crispy_forms',
+    'crispy_bootstrap4'
 ]
 
 MIDDLEWARE = [
@@ -65,6 +68,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'prima_app/templates'),
+                 os.path.join(BASE_DIR, 'forms_app/templates'),
                  os.path.join(BASE_DIR, 'seconda_app/templates'),
                  os.path.join(BASE_DIR, 'eventi/templates'),
                  os.path.join(BASE_DIR, 'news/templates'),
@@ -145,3 +149,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Redirect to home URL after login (Default redirects to /accounts/profile/)
+LOGIN_REDIRECT_URL = '/'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
