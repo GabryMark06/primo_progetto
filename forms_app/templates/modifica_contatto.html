@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}MODIFICA contatti{% endblock title %}
+{% load crispy_forms_tags %}
+{% block head_title %}{{ block.super }} | modifica_contatto{% endblock head_title %}
 {% block content %}
 
     <div class="container">

@@ -5,7 +5,7 @@ app_name='forms_app'
 
 urlpatterns = [
     path('contattaci/', contatti, name='contatti'),
-    path("lista_contatti/", lista_contatti.as_view(), name="lista_contatti"),
-    path('elimina_contatto/', elimina_contatto, name='elimina-contatto'),
-    path('modifica_contatto/', modifica_contatto, name='modifica-contatto'),
+    path("lista-contatti/", lista_contatti.as_view(), name="lista-contatti"),
+    path('elimina-contatto/<int:pk>/', elimina_contatto, name='elimina-contatto'),
+    path('modifica-contatto/<int:pk>/', modifica_contatto, name='modifica-contatto'),
 ]

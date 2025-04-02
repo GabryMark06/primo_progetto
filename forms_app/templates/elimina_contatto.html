@@ -1,5 +1,6 @@
 {% extends "base.html" %}
-{% block title %}elimina contatti{% endblock title %}
+{% load crispy_forms_tags %}
+{% block head_title %}{{ block.super }} | elimina_contatti{% endblock head_title %}
 {% block content %}
 
     <div class="container">
